@@ -6,11 +6,15 @@
 
 所利用的公式如下
 
-$\rho \left( i \right)C\left( i \right)V\left( i \right)\frac{{T\left( {t + \Delta t,i} \right) - T\left( {t,i} \right)}}{{\Delta t}} = \sum\limits_{j = 1}^4 {W\left( {i,j} \right)\left[ {T\left( {t,j} \right) - T\left( {t,i} \right)} \right]} $
+$$
+\rho \left( i \right)C\left( i \right)V\left( i \right)\frac{{T\left( {t + \Delta t,i} \right) - T\left( {t,i} \right)}}{{\Delta t}} = \sum\limits_{j = 1}^4 {W\left( {i,j} \right)\left[ {T\left( {t,j} \right) - T\left( {t,i} \right)} \right]} 
+$$
 
 其中：
 
-$W\left( {i,j} \right) = \frac{{S\left( {i,j} \right)}}{{\frac{1}{{h(i,j)}} + \frac{{D(i,j)}}{{K(i)}} + \frac{{D(i,j)}}{{K(i)}}}}$
+$$
+W\left( {i,j} \right) = \frac{{S\left( {i,j} \right)}}{{\frac{1}{{h(i,j)}} + \frac{{D(i,j)}}{{K(i)}} + \frac{{D(i,j)}}{{K(i)}}}}
+$$
 
   变量名          	含义           
   ρ(i)         	i单元密度        
@@ -52,11 +56,15 @@ $W\left( {i,j} \right) = \frac{{S\left( {i,j} \right)}}{{\frac{1}{{h(i,j)}} + \f
 
         二维内部节点：
 
-$F_0\le1/4$
+$$
+F_0\le1/4
+$$
 
         也即是：
 
-$\Delta t\le \frac{\rho C V }{4 W}$
+$$
+\Delta t\le \frac{\rho C V }{4 W}
+$$
 
         所以只需进行计算金属内部以及铸型内部的临界时间步长，比较即可得到稳定性条件。
 
@@ -141,19 +149,25 @@ $$
 \rho C\frac{{\partial T}}{{\partial \tau }} = \frac{\partial }{{\partial X}}\left( {\lambda \frac{{\partial T}}{{\partial X}}} \right) + \frac{\partial }{{\partial Y}}\left( {\lambda \frac{{\partial T}}{{\partial Y}}} \right) + \frac{\partial }{{\partial Z}}\left( {\lambda \frac{{\partial T}}{{\partial Z}}} \right) + \rho L\frac{{\partial {f_s}}}{{\partial \tau }}\
 $$
 
-        将 $\rho L\frac{{\partial {f_s}}}{{\partial \tau }}\ = \rho L\frac{{\partial {f_s}}}{{\partial T }}\ \frac{{\partial {T}}}{{\partial \tau }}\$ 代入传导方程，可以得到：
+将$\rho L\frac{{\partial {f_s}}}{{\partial \tau }}\ = \rho L\frac{{\partial {f_s}}}{{\partial T }}\ \frac{{\partial {T}}}{{\partial \tau }}\$代入传导方程，可以得到：
 
-$\rho （C-L\frac{{\partial {f_s}}}{{\partial \tau }}）\frac{{\partial T}}{{\partial \tau }}   = \frac{\partial }{{\partial X}}\left( {\lambda \frac{{\partial T}}{{\partial X}}} \right) + \frac{\partial }{{\partial Y}}\left( {\lambda \frac{{\partial T}}{{\partial Y}}} \right) + \frac{\partial }{{\partial Z}}\left( {\lambda \frac{{\partial T}}{{\partial Z}}} \right)$
+$$
+\rho （C-L\frac{{\partial {f_s}}}{{\partial \tau }}）\frac{{\partial T}}{{\partial \tau }}   = \frac{\partial }{{\partial X}}\left( {\lambda \frac{{\partial T}}{{\partial X}}} \right) + \frac{\partial }{{\partial Y}}\left( {\lambda \frac{{\partial T}}{{\partial Y}}} \right) + \frac{\partial }{{\partial Z}}\left( {\lambda \frac{{\partial T}}{{\partial Z}}} \right)
+$$
 
         也即是能够得到等价比热：
 
-$C_{PE}= C-L\frac{{\partial {f_s}}}{{\partial \tau }}$
+$$
+C_{PE}= C-L\frac{{\partial {f_s}}}{{\partial \tau }}
+$$
 
         在液相线与固相线温度之间用等价比热置换C，再根据固相率与温度变化的关系，可以将传导方程按非稳定导热问题处理。
 
         假定固相率与温度的关系为线性，则可以得到：
 
-$C_{PE}= C-L\frac{{\partial {f_s}}}{{\partial \tau }}= C-L\frac{{-1}}{{T_L-T_S }}$
+$$
+C_{PE}= C-L\frac{{\partial {f_s}}}{{\partial \tau }}= C-L\frac{{-1}}{{T_L-T_S }}
+$$
 
 对应代码为：
 
