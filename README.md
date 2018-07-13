@@ -6,11 +6,11 @@
 
 所利用的公式如下
 
-\rho \left( i \right)C\left( i \right)V\left( i \right)\frac{{T\left( {t + \Delta t,i} \right) - T\left( {t,i} \right)}}{{\Delta t}} = \sum\limits_{j = 1}^4 {W\left( {i,j} \right)\left[ {T\left( {t,j} \right) - T\left( {t,i} \right)} \right]}
+$\rho \left( i \right)C\left( i \right)V\left( i \right)\frac{{T\left( {t + \Delta t,i} \right) - T\left( {t,i} \right)}}{{\Delta t}} = \sum\limits_{j = 1}^4 {W\left( {i,j} \right)\left[ {T\left( {t,j} \right) - T\left( {t,i} \right)} \right]} $
 
 其中：
 
-W\left( {i,j} \right) = \frac{{S\left( {i,j} \right)}}{{\frac{1}{{h(i,j)}} + \frac{{D(i,j)}}{{K(i)}} + \frac{{D(i,j)}}{{K(i)}}}}
+$W\left( {i,j} \right) = \frac{{S\left( {i,j} \right)}}{{\frac{1}{{h(i,j)}} + \frac{{D(i,j)}}{{K(i)}} + \frac{{D(i,j)}}{{K(i)}}}}
 
   变量名          	含义           
   ρ(i)         	i单元密度        
@@ -181,6 +181,7 @@ C_{PE}= C-L\frac{{\partial {f_s}}}{{\partial \tau }}= C-L\frac{{-1}}{{T_L-T_S }}
     print(time[0])
     print(tcenter)           #输出中心温度变化的数组，可以用来绘制冷却曲线
     #print(arr)             #此处可以选择输出温度数组
+
 
 
 
